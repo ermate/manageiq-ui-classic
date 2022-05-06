@@ -15,6 +15,13 @@ module PhysicalServerHelper::TextualSummary
     )
   end
 
+  def textual_group_profiles
+    TextualGroup.new(
+      _("Profiles"),
+      %i[server_profile]
+    )
+  end
+
   def textual_group_management_networks
     TextualGroup.new(_("Management Networks"), %i[mac ipv4 ipv6])
   end
@@ -166,6 +173,11 @@ module PhysicalServerHelper::TextualSummary
 
   def textual_loc_led_state
     {:label => _("Identify LED State"), :value => @record.asset_detail&.location_led_state}
+  end
+
+  def textual_server_profile
+    #{:label => _("Server Profile"), :value => @record.asset_detail&.server_profile}
+    {:label => _("Server Profile"), :value => "test"}
   end
 
   def textual_support_contact

@@ -32,6 +32,8 @@ col_order:
 - health_state
 - power_state
 - asset_detail.location_led_state
+- test
+#- asset_detail&.server_profile
 - hostname
 - asset_detail.product_name
 - asset_detail.manufacturer
@@ -46,6 +48,7 @@ headers:
 - Health State
 - Power State
 - LED State
+- Server Profile
 - Hostname
 - Product Name
 - Manufacturer
